@@ -1,0 +1,21 @@
+.global-styles {;
+}
+
+.global-styles ul,
+.global-styles ol {
+border-top: 1px solid #ccc;
+}
+
+.global-styles li {
+padding: 50px 0;
+border-bottom: 1px solid #ccc;
+}
+
+
+/* reset inner styles */
+.global-styles li li,
+.global-styles li ul,
+.global-styles li ol {
+border: none;
+padding: 0;
+}

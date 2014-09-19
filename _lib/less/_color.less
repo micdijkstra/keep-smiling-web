@@ -1,0 +1,58 @@
+// color
+@black: #000;
+@white: #fff;
+@red: #ff0000;
+
+.gray(@percent) {
+  color: lighten(@black, percentage(@percent / 100));
+}
+
+.opacity-0 {.opacity(0);}
+.opacity-100 {.opacity(1.0);}
+.opacity(@opacity: .5) {
+-khtml-opacity: @opacity;
+-moz-opacity: @opacity;
+opacity: @opacity;
+filter: @opacity;
+}
+
+.highlight(@backgroundColor, @textColor) {
+  ::selection, -moz::selection {
+    background: @backgroundColor;
+    color: @textColor;
+  }
+}
+
+.light-background {
+background-color: @light-color;
+color: @dark-color;
+}
+.dark-background {
+background-color: @dark-color;
+color: @light-color;
+}
+
+.light-text {color: @dark-color;}
+.dark-text {color: @dark-color;}
+
+.bg-error {background-color: @error;}
+.bg-alert {background-color: @alert;}
+.bg-success {background-color: @success;}
+.bg-disabled {background-color: @disabled;}
+
+.txt-error {color: @error;}
+.txt-alert {color: @alert;}
+.txt-success {color: @success;}
+.txt-disabled {color: @disabled;}
+
+.disabled {
+color: @disabled-text-color;
+background-color: @disabled-background-color;
+
+	&:hover {
+	cursor: default;
+	}
+}
+
+.text-primary-color {color: @primary-color;}
+.text-secondary-color {color: @secondary-color;}
