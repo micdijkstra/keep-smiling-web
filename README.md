@@ -1,4 +1,4 @@
-# Keep Smilin' DOT COM
+# Keep Smiling DOT COM
 [FUUUUUUUUN](http://jheftmann.github.io/keep-smilin-site)
 
 ### Setup

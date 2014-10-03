@@ -1,5 +1,15 @@
 @yellow: #fff100;
 
+.link-style {
+border-bottom: 1px solid transparent;
+padding-bottom: 3px;
+.add-transition;
+}
+
+.link-hover {
+border-bottom: 1px solid @black;
+}
+
 
 * {
 margin: 0;
@@ -30,7 +40,10 @@ line-height: 1.2;
 }
 
 h1 {
-font-size: 170px;
+font-size: 100px;
+	@media (min-width: @palm) {
+	font-size: 170px;
+	}
 }
 
 h2 {
@@ -43,7 +56,8 @@ margin-bottom: 20px;
 }
 
 h4 {
-
+font-size: 20px;
+margin-bottom: 5px;
 }
 
 h5 {
@@ -51,7 +65,15 @@ h5 {
 }
 
 p {
-	margin-bottom: 20px;
+font-size: 20px;
+margin-bottom: 20px;
+
+	a {
+
+		&:hover {
+		.link-hover;
+		}
+	}
 }
 
 a {
@@ -105,11 +127,6 @@ font-size: 45px;
 }
 
 .sidebar {
-/*
-width: 50%;
-height: 10px;
-margin-top: 12.5%;
-*/
 font-size: 18px;
 top: 50%;
 .zona-semi;
@@ -120,7 +137,7 @@ top: 50%;
 	left: -120px;
 	.rotate(-90deg);
 	}
-	
+
 	&.sidebar-right {
 	right: -120px;
 	.rotate(90deg);
@@ -132,15 +149,15 @@ top: 50%;
 .fixed;
 .text-center;
 width: 100%;
-bottom: 20px;
+bottom: 40px;
 font-size: 18px;
 
 	ul {
-	
+
 		li {
 		display: inline-block;
 		margin-left: 30px;
-		
+
 			&:first-child {
 			margin-left: 0;
 			}
@@ -150,16 +167,27 @@ font-size: 18px;
 
 .section {
 min-height: 100%;
+//border-top: 1px solid red; //temporary
 }
 
 .section.dark {
 background-color: black;
 color: @yellow;
+
+	a {
+	border-bottom: 1px solid transparent;
+	.link-style;
+
+		&:hover {
+		.link-hover;
+		border-color: @yellow;
+		}
+	}
 }
 
 #section-1 {
 background: url('../assets/img/smile.svg') no-repeat center center;
-background-size: 60% auto;
+background-size: 90% auto;
 }
 
 #section-2 {
@@ -167,10 +195,23 @@ background-size: 60% auto;
 	h1 {
 		margin-bottom: 0;
 	}
-	
+
 	h2 {
-	.make-sm-column(8);
-	.make-sm-column-offset(2);
+	.make-sm-column(6);
+	.make-sm-column-offset(3);
+	margin-top: 20px;
+	.lh-sm;
+	}
+}
+
+#section-3 {
+
+	.video-wrapper {
+	.text-center;
+
+		video {
+		width: 100%;
+		}
 	}
 }
 
@@ -179,11 +220,53 @@ background-size: 60% auto;
 	.who {
 	.text-center;
 	padding: 0 60px;
+
+		img {
+		margin-bottom: 40px;
+		}
+
+		p {
+
+		}
+
+		ul {
+		margin-top: 40px;
+		}
+
+		li {
+		margin-bottom: 10px;
+
+			a {
+			padding-bottom: 8px;
+			border-bottom: 1px solid transparent;
+			.link-style;
+
+				&:hover {
+				.link-hover;
+				}
+			}
+		}
 	}
 }
 
 #section-5 {
 padding: 100px 0;
+
+	.column {
+	padding: 0 40px;
+	}
+
+	p {
+	margin-bottom: 40px;
+	}
+
+	.multi-paragraph p {
+	text-indent: 40px;
+	margin-bottom: 0;
+		&:first-of-type {
+		text-indent: 0;
+		}
+	}
 }
 
 
