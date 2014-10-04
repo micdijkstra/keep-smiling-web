@@ -35,14 +35,17 @@ line-height: 1.2;
 }
 
 h1 {
-font-size: 100px;
-	@media (min-width: @palm) {
+font-size: 40px;
+@media (min-width: @screen-sm-min) {
 	font-size: 170px;
 	}
 }
 
 h2 {
-font-size: 28px;
+font-size: 18px;
+@media (min-width: @screen-sm-min) {
+	font-size: 28px;
+	}
 }
 
 h3 {
@@ -60,8 +63,11 @@ h5 {
 }
 
 p {
-font-size: 20px;
+font-size: 15px;
 margin-bottom: 20px;
+@media (min-width: @screen-sm-min) {
+	font-size: 20px;
+	}
 
 	a {
 
@@ -152,28 +158,40 @@ text-shadow:
 position: fixed;
 top: 20px;
 width: 100%;
-font-size: 45px;
+font-size: 25px;
 z-index: 999;
 .zona-extra;
 .text-center;
+@media (min-width: @screen-sm-min) {
+	font-size: 45px;
+	}
 }
 
 .sidebar {
-font-size: 18px;
+font-size: 13px;
 top: 50%;
 z-index: 999;
 .zona-semi;
 .text-center;
 .fixed;
+@media (min-width: @screen-sm-min) {
+	font-size: 18px;
+	}
 
 	&.sidebar-left {
-	left: -120px;
+	left: -90px;
 	.rotate(-90deg);
+	@media (min-width: @screen-sm-min) {
+		left: -120px;
+		}
 	}
 
 	&.sidebar-right {
-	right: -120px;
+	right: -90px;
 	.rotate(90deg);
+	@media (min-width: @screen-sm-min) {
+		right: -120px;
+		}
 	}
 }
 
@@ -213,19 +231,24 @@ color: @yellow;
 // modules
 .nav {
 .zona-semi;
-//.fixed;
 .absolute;
 .text-center;
 width: 100%;
 bottom: 40px;
-font-size: 18px;
+font-size: 15px;
 z-index: 999;
+@media (min-width: @screen-sm-min) {
+	font-size: 18px;
+	}
 
 	ul {
 
 		li {
 		display: inline-block;
-		margin-left: 30px;
+		margin-left: 15px;
+		@media (min-width: @screen-sm-min) {
+			margin-left: 30px;
+			}
 
 			&:first-child {
 			margin-left: 0;
@@ -280,9 +303,16 @@ background-size: 90% auto;
 	.who {
 	.text-center;
 	padding: 0 60px;
+	margin-bottom: 50px;
+	@media (min-width: @screen-sm-min) {
+		margin-bottom: 0;
+		}
 
 		img {
-		margin-bottom: 40px;
+		margin-bottom: 20px;
+		@media (min-width: @screen-sm-min) {
+			margin-bottom: 40px;
+			}
 		}
 
 		p {
@@ -290,11 +320,18 @@ background-size: 90% auto;
 		}
 
 		ul {
-		margin-top: 40px;
+		margin-top: 30px;
+		@media (min-width: @screen-sm-min) {
+			margin-top: 40px;
+			}
 		}
 
 		li {
 		margin-bottom: 10px;
+
+			p {
+			margin-bottom: 0;
+			}
 
 			a {
 			padding-bottom: 8px;
@@ -320,6 +357,13 @@ padding: 100px 0;
 	margin-bottom: 40px;
 	}
 
+	.multi-paragraph {
+	margin-bottom: 40px;
+	@media (min-width: @screen-sm-min) {
+		margin-bottom: 0;
+		}
+	}
+
 	.multi-paragraph p {
 	text-indent: 40px;
 	margin-bottom: 0;
@@ -328,39 +372,3 @@ padding: 100px 0;
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
