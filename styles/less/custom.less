@@ -1,31 +1,11 @@
+// get helpers
+@import "../../_lib/lib.less";
+@import "_fonts";
+
+//variables
 @yellow: #fff100;
 
-.link-style {
-border-bottom: 1px solid transparent;
-padding-bottom: 3px;
-.add-transition;
-}
-
-.link-hover {
-border-bottom: 1px solid @black;
-}
-
-.text-yellow {
-color: @yellow;
-}
-
-.background-yellow {
-background-color: @yellow;
-}
-
-.text-yellow,
-.background-yellow {
-	&.swap {
-	.add-transition;
-	}
-}
-
-
+// global
 * {
 margin: 0;
 }
@@ -110,15 +90,6 @@ text-decoration: none;
 	}
 }
 
-.outline:hover {
-color: @yellow;
-text-shadow:
--1px -1px 0 @black,
-1px -1px 0 @black,
--1px 1px 0 @black,
-1px 1px 0 @black;
-}
-
 ul,
 ol {
 margin: 0;
@@ -141,6 +112,42 @@ hr {
 
 }
 
+// styles
+.link-style {
+border-bottom: 1px solid transparent;
+padding-bottom: 3px;
+.add-transition;
+}
+
+.link-hover {
+border-bottom: 1px solid @black;
+}
+
+.text-yellow {
+color: @yellow;
+}
+
+.background-yellow {
+background-color: @yellow;
+}
+
+.text-yellow,
+.background-yellow {
+	&.swap {
+	.add-transition;
+	}
+}
+
+.outline:hover {
+color: @yellow;
+text-shadow:
+-1px -1px 0 @black,
+1px -1px 0 @black,
+-1px 1px 0 @black,
+1px 1px 0 @black;
+}
+
+// components
 .site-header {
 position: fixed;
 top: 20px;
@@ -180,6 +187,30 @@ width: 40px;
 height: 40px;
 }
 
+
+// layout
+.section {
+min-height: 100%;
+position: relative;
+border-top: 1px solid @yellow; //temporary
+}
+
+.section.dark {
+background-color: black;
+color: @yellow;
+
+	a {
+	border-bottom: 1px solid transparent;
+	.link-style;
+
+		&:hover {
+		.link-hover;
+		border-color: @yellow;
+		}
+	}
+}
+
+// modules
 .nav {
 .zona-semi;
 //.fixed;
@@ -211,27 +242,7 @@ z-index: 999;
 	}
 }
 
-.section {
-min-height: 100%;
-position: relative;
-border-top: 1px solid @yellow; //temporary
-}
-
-.section.dark {
-background-color: black;
-color: @yellow;
-
-	a {
-	border-bottom: 1px solid transparent;
-	.link-style;
-
-		&:hover {
-		.link-hover;
-		border-color: @yellow;
-		}
-	}
-}
-
+// sections
 #section-1 {
 background: url('../assets/img/smile.svg') no-repeat center center;
 background-size: 90% auto;
@@ -249,7 +260,7 @@ background-size: 90% auto;
 	.make-sm-column(6);
 	.make-sm-column-offset(3);
 	margin-top: 20px;
-	.lh-sm;
+	line-height: 1.5;
 	}
 }
 
