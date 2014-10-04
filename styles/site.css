@@ -4753,6 +4753,19 @@ button.button-disabled,
 .link-hover {
   border-bottom: 1px solid #000000;
 }
+.text-yellow {
+  color: #fff100;
+}
+.background-yellow {
+  background-color: #fff100;
+}
+.text-yellow.swap,
+.background-yellow.swap {
+  transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
 * {
   margin: 0;
 }
@@ -4831,6 +4844,7 @@ ul {
   top: 20px;
   width: 100%;
   font-size: 45px;
+  z-index: 999;
   font-family: 'ZonaPro-ExtraBold', 'Futura', Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-align: center;
@@ -4838,6 +4852,7 @@ ul {
 .sidebar {
   font-size: 18px;
   top: 50%;
+  z-index: 999;
   font-family: 'ZonaPro-SemiBold', 'Futura', Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-align: center;
@@ -4857,14 +4872,24 @@ ul {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
 }
+.next-section {
+  background: transparent url('../assets/img/arrow.svg') no-repeat center center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -20px;
+  width: 40px;
+  height: 40px;
+}
 .nav {
   font-family: 'ZonaPro-SemiBold', 'Futura', Helvetica, Arial, sans-serif;
   font-weight: normal;
-  position: fixed;
+  position: absolute;
   text-align: center;
   width: 100%;
   bottom: 40px;
   font-size: 18px;
+  z-index: 999;
 }
 .nav ul li {
   display: inline-block;
@@ -4876,8 +4901,13 @@ ul {
 .nav ul li.current {
   border-bottom: 2px solid #000000;
 }
+.nav.fixed {
+  position: fixed !important;
+}
 .section {
   min-height: 100%;
+  position: relative;
+  border-top: 1px solid red;
 }
 .section.dark {
   background-color: black;
@@ -4900,7 +4930,22 @@ ul {
   background-size: 90% auto;
 }
 #section-2 h1 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  #section-2 h1 {
+    float: left;
+    width: 83.33333333333334%;
+  }
+}
+@media (min-width: 768px) {
+  #section-2 h1 {
+    margin-left: 8.333333333333332%;
+  }
 }
 #section-2 h2 {
   position: relative;

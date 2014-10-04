@@ -10,6 +10,21 @@ padding-bottom: 3px;
 border-bottom: 1px solid @black;
 }
 
+.text-yellow {
+color: @yellow;
+}
+
+.background-yellow {
+background-color: @yellow;
+}
+
+.text-yellow,
+.background-yellow {
+	&.swap {
+	.add-transition;
+	}
+}
+
 
 * {
 margin: 0;
@@ -131,6 +146,7 @@ position: fixed;
 top: 20px;
 width: 100%;
 font-size: 45px;
+z-index: 999;
 .zona-extra;
 .text-center;
 }
@@ -138,6 +154,7 @@ font-size: 45px;
 .sidebar {
 font-size: 18px;
 top: 50%;
+z-index: 999;
 .zona-semi;
 .text-center;
 .fixed;
@@ -153,13 +170,25 @@ top: 50%;
 	}
 }
 
+.next-section {
+background: transparent url('../assets/img/arrow.svg') no-repeat center center;
+position: absolute;
+bottom: 20px;
+left: 50%;
+margin-left: -20px;
+width: 40px;
+height: 40px;
+}
+
 .nav {
 .zona-semi;
-.fixed;
+//.fixed;
+.absolute;
 .text-center;
 width: 100%;
 bottom: 40px;
 font-size: 18px;
+z-index: 999;
 
 	ul {
 
@@ -176,11 +205,16 @@ font-size: 18px;
 			}
 		}
 	}
+
+	&.fixed {
+	position: fixed !important;
+	}
 }
 
 .section {
 min-height: 100%;
-//border-top: 1px solid red; //temporary
+position: relative;
+border-top: 1px solid red; //temporary
 }
 
 .section.dark {
@@ -206,7 +240,9 @@ background-size: 90% auto;
 #section-2 {
 
 	h1 {
-		margin-bottom: 0;
+	.make-sm-column(10);
+	.make-sm-column-offset(1);
+	margin-bottom: 0;
 	}
 
 	h2 {
