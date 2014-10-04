@@ -95,6 +95,15 @@ text-decoration: none;
 	}
 }
 
+.outline:hover {
+color: @yellow;
+text-shadow:
+-1px -1px 0 @black,
+1px -1px 0 @black,
+-1px 1px 0 @black,
+1px 1px 0 @black;
+}
+
 ul,
 ol {
 margin: 0;
@@ -160,6 +169,10 @@ font-size: 18px;
 
 			&:first-child {
 			margin-left: 0;
+			}
+
+			&.current {
+			border-bottom: 2px solid @black;
 			}
 		}
 	}

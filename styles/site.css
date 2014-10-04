@@ -4814,6 +4814,10 @@ a:hover {
   text-decoration: none;
   cursor: pointer;
 }
+.outline:hover {
+  color: #fff100;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+}
 ul,
 ol {
   margin: 0;
@@ -4868,6 +4872,9 @@ ul {
 }
 .nav ul li:first-child {
   margin-left: 0;
+}
+.nav ul li.current {
+  border-bottom: 2px solid #000000;
 }
 .section {
   min-height: 100%;
