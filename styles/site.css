@@ -4907,7 +4907,7 @@ ul {
 .section {
   min-height: 100%;
   position: relative;
-  border-top: 1px solid red;
+  border-top: 1px solid #fff100;
 }
 .section.dark {
   background-color: black;

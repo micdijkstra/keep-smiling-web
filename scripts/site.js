@@ -52,16 +52,18 @@ $(document).ready(function() {
 
 
 	// adjust some things based on the current section
-
 	// fix nav between sections 2 and 6
 	$('#section-2').waypoint(function(direction) {
 	  $('.nav').addClass('fixed');
 	});
 
-
+	// swap colors over dark sections
 	$('.dark').waypoint(function(direction) {
 	  $('.swap').addClass('text-yellow');
 	}, { offset: '50%' });
+
+
+	// play video when it enters viewport
 
 
 	$(window).trigger('resize');
