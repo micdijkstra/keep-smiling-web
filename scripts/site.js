@@ -3,7 +3,7 @@ $(document).ready(function() {
 	// center content within sections
   $(window).resize(function() {
 
-	 //if ($(window).width() >= 480) {
+	 if ($(window).width() >= 480) {
 	    $('.section').each(function(){
 	      var parent = $(this);
 	      var child = $(this).find('.content-middle');
@@ -15,9 +15,9 @@ $(document).ready(function() {
 	      console.log(child);
 
 	    });
-   // } else {
+   } else {
 
-   // }
+   }
 
   });
 

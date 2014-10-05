@@ -208,7 +208,12 @@ height: 40px;
 .section {
 min-height: 100%;
 position: relative;
-border-top: 1px solid @yellow; //temporary
+padding: 100px 0;
+//border-top: 1px solid @yellow; //temporary
+@media (min-width: @screen-sm-min) {
+	display: block;
+	padding: 0;
+	}
 }
 
 .section.dark {

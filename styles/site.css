@@ -4279,7 +4279,13 @@ ul {
 .section {
   min-height: 100%;
   position: relative;
-  border-top: 1px solid #ffff00;
+  padding: 100px 0;
+}
+@media (min-width: 768px) {
+  .section {
+    display: block;
+    padding: 0;
+  }
 }
 .section.dark {
   background-color: black;
