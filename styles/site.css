@@ -4075,7 +4075,7 @@ html {
   height: 100%;
 }
 body {
-  background-color: #fff100;
+  background-color: #ffff00;
   min-height: 100%;
   font-size: 20px;
   line-height: 1.4;
@@ -4158,10 +4158,10 @@ ul {
   border-bottom: 1px solid #000000;
 }
 .text-yellow {
-  color: #fff100;
+  color: #ffff00;
 }
 .background-yellow {
-  background-color: #fff100;
+  background-color: #ffff00;
 }
 .text-yellow.swap,
 .background-yellow.swap {
@@ -4171,7 +4171,7 @@ ul {
   -o-transition: all 0.1s ease-in-out;
 }
 .outline:hover {
-  color: #fff100;
+  color: #ffff00;
   text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
 }
 .site-header {
@@ -4184,21 +4184,27 @@ ul {
   font-weight: normal;
   text-align: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .site-header {
     font-size: 45px;
   }
 }
 .sidebar {
-  font-size: 13px;
+  font-size: 15px;
   top: 50%;
   z-index: 999;
   font-family: 'ZonaPro-SemiBold', 'Futura', Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-align: center;
   position: fixed;
+  display: none;
 }
 @media (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
   .sidebar {
     font-size: 18px;
   }
@@ -4210,22 +4216,12 @@ ul {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
 }
-@media (min-width: 768px) {
-  .sidebar.sidebar-left {
-    left: -120px;
-  }
-}
 .sidebar.sidebar-right {
   right: -90px;
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
-}
-@media (min-width: 768px) {
-  .sidebar.sidebar-right {
-    right: -120px;
-  }
 }
 .next-section {
   background: transparent url('../assets/img/arrow.svg') no-repeat center center;
@@ -4239,11 +4235,11 @@ ul {
 .section {
   min-height: 100%;
   position: relative;
-  border-top: 1px solid #fff100;
+  border-top: 1px solid #ffff00;
 }
 .section.dark {
   background-color: black;
-  color: #fff100;
+  color: #ffff00;
 }
 .section.dark a {
   border-bottom: 1px solid transparent;
@@ -4255,7 +4251,7 @@ ul {
 }
 .section.dark a:hover {
   border-bottom: 1px solid #000000;
-  border-color: #fff100;
+  border-color: #ffff00;
 }
 .nav {
   font-family: 'ZonaPro-SemiBold', 'Futura', Helvetica, Arial, sans-serif;
@@ -4263,13 +4259,20 @@ ul {
   position: absolute;
   text-align: center;
   width: 100%;
-  bottom: 40px;
+  bottom: 0;
   font-size: 15px;
   z-index: 999;
+  background-color: #000000;
+  color: #ffff00;
+  padding: 10px 0;
 }
 @media (min-width: 768px) {
   .nav {
+    background-color: transparent;
+    color: #000000;
     font-size: 18px;
+    bottom: 30px;
+    padding: 0;
   }
 }
 .nav ul li {
@@ -4285,7 +4288,12 @@ ul {
   margin-left: 0;
 }
 .nav ul li.current {
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #ffff00;
+}
+@media (min-width: 768px) {
+  .nav ul li.current {
+    border-color: #000000;
+  }
 }
 .nav.fixed {
   position: fixed !important;

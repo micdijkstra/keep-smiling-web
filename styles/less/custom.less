@@ -3,7 +3,7 @@
 @import "_fonts";
 
 //variables
-@yellow: #fff100;
+@yellow: #ffff00;
 
 // global
 * {
@@ -162,36 +162,34 @@ font-size: 25px;
 z-index: 999;
 .zona-extra;
 .text-center;
-@media (min-width: @screen-sm-min) {
+@media (min-width: @screen-md-min) {
 	font-size: 45px;
 	}
 }
 
 .sidebar {
-font-size: 13px;
+font-size: 15px;
 top: 50%;
 z-index: 999;
 .zona-semi;
 .text-center;
 .fixed;
+display: none;
 @media (min-width: @screen-sm-min) {
+	display: block;
+	}
+@media (min-width: @screen-md-min) {
 	font-size: 18px;
 	}
 
 	&.sidebar-left {
 	left: -90px;
 	.rotate(-90deg);
-	@media (min-width: @screen-sm-min) {
-		left: -120px;
-		}
 	}
 
 	&.sidebar-right {
 	right: -90px;
 	.rotate(90deg);
-	@media (min-width: @screen-sm-min) {
-		right: -120px;
-		}
 	}
 }
 
@@ -234,11 +232,18 @@ color: @yellow;
 .absolute;
 .text-center;
 width: 100%;
-bottom: 40px;
+bottom: 0;
 font-size: 15px;
 z-index: 999;
+background-color: @black;
+color: @yellow;
+padding: 10px 0;
 @media (min-width: @screen-sm-min) {
+	background-color: transparent;
+	color: @black;
 	font-size: 18px;
+	bottom: 30px;
+	padding: 0;
 	}
 
 	ul {
@@ -255,7 +260,10 @@ z-index: 999;
 			}
 
 			&.current {
-			border-bottom: 2px solid @black;
+			border-bottom: 2px solid @yellow;
+			@media (min-width: @screen-sm-min) {
+				border-color: @black;
+				}
 			}
 		}
 	}
