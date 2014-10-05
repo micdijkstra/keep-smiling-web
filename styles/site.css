@@ -4136,7 +4136,7 @@ h6 {
   line-height: 1.2;
 }
 h1 {
-  font-size: 40px;
+  font-size: 36px;
 }
 @media (min-width: 768px) {
   h1 {
@@ -4144,7 +4144,7 @@ h1 {
   }
 }
 h2 {
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (min-width: 768px) {
   h2 {
