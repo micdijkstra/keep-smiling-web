@@ -4243,15 +4243,16 @@ ul {
   }
 }
 .sidebar {
+  display: none;
   font-size: 15px;
   top: 50%;
+  padding: 20px 0;
   z-index: 999;
   font-family: '../assets/fonts/zona_prosemibold';
   font-weight: normal;
   font-style: normal;
   text-align: center;
   position: fixed;
-  display: none;
 }
 @media (min-width: 768px) {
   .sidebar {
@@ -4263,19 +4264,38 @@ ul {
     font-size: 18px;
   }
 }
+.sidebar:hover {
+  transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
+.sidebar:hover:hover {
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
 .sidebar.sidebar-left {
-  left: -90px;
+  left: -120px;
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
 }
+.sidebar.sidebar-left:hover {
+  left: -100px;
+}
 .sidebar.sidebar-right {
-  right: -90px;
+  right: -120px;
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
+}
+.sidebar.sidebar-right:hover {
+  right: -100px;
 }
 .next-section {
   background: transparent url('../assets/img/arrow.svg') no-repeat center center;

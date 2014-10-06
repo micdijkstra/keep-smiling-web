@@ -174,13 +174,14 @@ z-index: 999;
 }
 
 .sidebar {
+display: none;
 font-size: 15px;
 top: 50%;
+padding: 20px 0;
 z-index: 999;
 .zona-semi;
 .text-center;
 .fixed;
-display: none;
 @media (min-width: @screen-sm-min) {
 	display: block;
 	}
@@ -188,14 +189,27 @@ display: none;
 	font-size: 18px;
 	}
 
+	&:hover {
+	.add-transition;
+	.hover;
+	}
+
 	&.sidebar-left {
-	left: -90px;
+	left: -120px;
 	.rotate(-90deg);
+
+		&:hover {
+		left: -100px;
+		}
 	}
 
 	&.sidebar-right {
-	right: -90px;
+	right: -120px;
 	.rotate(90deg);
+
+		&:hover {
+		right: -100px;
+		}
 	}
 }
 
