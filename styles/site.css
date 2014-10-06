@@ -4140,6 +4140,16 @@ h1 {
 }
 @media (min-width: 768px) {
   h1 {
+    font-size: 80px;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 140px;
+  }
+}
+@media (min-width: 1600px) {
+  h1 {
     font-size: 170px;
   }
 }
