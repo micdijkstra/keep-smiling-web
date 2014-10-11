@@ -4512,3 +4512,14 @@ ul {
 #section-5 .multi-paragraph p:first-of-type {
   text-indent: 0;
 }
+
+#section-6 h1 {
+  transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  padding-top: 10px;
+}
+#section-6 h1:hover {
+  padding-top: 0px;
+}
