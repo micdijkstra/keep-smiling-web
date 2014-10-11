@@ -4254,23 +4254,13 @@ ul {
   text-align: center;
   position: fixed;
 }
-@media (min-width: 768px) {
-  .sidebar {
-    display: block;
-  }
-}
-@media (min-width: 992px) {
-  .sidebar {
-    font-size: 18px;
-  }
-}
-.sidebar:hover {
+.sidebar {
   transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -webkit-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
 }
-.sidebar:hover:hover {
+.sidebar:hover {
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -4296,6 +4286,24 @@ ul {
 }
 .sidebar.sidebar-right:hover {
   right: -100px;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+
+  .sidebar.sidebar-left {
+    left: -110px;
+  }
+
+  .sidebar.sidebar-right {
+    right: -110px;
+  }
+}
+@media (min-width: 992px) {
+  .sidebar {
+    font-size: 18px;
+  }
 }
 .next-section {
   background: transparent url('../assets/img/arrow.svg') no-repeat center center;
@@ -4379,26 +4387,35 @@ ul {
 .nav.fixed {
   position: fixed !important;
 }
+.nav.text-yellow ul li a,
+.nav.text-yellow ul li a:hover {
+  color: #ffff00;
+}
+.nav.text-yellow ul li.current {
+  border-color: #ffff00;
+}
 #section-1 {
   background: url('../assets/img/smile.svg') no-repeat center center;
   background-size: 80% auto;
 }
 #section-2 h1 {
-  position: relative;
+  line-height: 1.1;
   min-height: 1px;
+  margin-bottom: 0;
   padding-left: 15px;
   padding-right: 15px;
-  margin-bottom: 0;
+  position: relative;
 }
 @media (min-width: 768px) {
   #section-2 h1 {
     float: left;
+    margin-left: 8.333333333333332%;
     width: 83.33333333333334%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1500px) {
   #section-2 h1 {
-    margin-left: 8.333333333333332%;
+    line-height: 1.2;
   }
 }
 #section-2 h2 {
@@ -4437,6 +4454,7 @@ ul {
   }
 }
 #section-4 .who img {
+  margin-top: 40px;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
