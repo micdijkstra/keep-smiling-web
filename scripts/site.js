@@ -10,10 +10,6 @@ $(document).ready(function() {
         var topMargin = ((parent.height() - child.height()) / 2);
 
         child.css('margin-top', topMargin);
-
-        console.log(parent);
-        console.log(child);
-
       });
   } else {
 
@@ -38,7 +34,6 @@ $(document).ready(function() {
           //I get fired when the animation is ending
       },
       scrollChange: function($currentListItem) {
-          //I get fired when you enter a section and I pass the list item of the section
       }
   });
 
@@ -107,6 +102,22 @@ $(document).ready(function() {
       $('#video').get(0).pause();
     }
   }, { offset: '75%' });
+
+  $(document).keypress(function(e)
+  {
+    if(e.keyCode == 32) {
+      goToNextNavItem()
+      return false;
+    }
+  });
+
+  function goToNextNavItem() {
+    if ($('.nav .current').length) {
+      $('.nav .current').next('li').find('a').click();
+    } else {
+      $('a.next-section').click();
+    }
+  }
 
 
   $(window).trigger('resize');
