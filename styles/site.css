@@ -4383,6 +4383,9 @@ ul {
   background: url('../assets/img/smile.svg') no-repeat center center;
   background-size: 80% auto;
 }
+#section-2 {
+  overflow: hidden;
+}
 #section-2 h1 {
   position: relative;
   min-height: 1px;
