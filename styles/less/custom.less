@@ -174,43 +174,54 @@ z-index: 999;
 }
 
 .sidebar {
-display: none;
-font-size: 15px;
-top: 50%;
-padding: 20px 0;
-z-index: 999;
-.zona-semi;
-.text-center;
-.fixed;
-@media (min-width: @screen-sm-min) {
-	display: block;
-	}
-@media (min-width: @screen-md-min) {
-	font-size: 18px;
-	}
+  display: none;
+  font-size: 15px;
+  top: 50%;
+  padding: 20px 0;
+  z-index: 999;
+  .zona-semi;
+  .text-center;
+  .fixed;
 
-	&:hover {
-	.add-transition;
-	.hover;
-	}
+  @media (min-width: @screen-sm-min) {
+    display: block;
+  }
 
-	&.sidebar-left {
-	left: -120px;
-	.rotate(-90deg);
+  @media (min-width: @screen-md-min) {
+    font-size: 18px;
+  }
 
-		&:hover {
-		left: -100px;
-		}
-	}
+  .add-transition;
 
-	&.sidebar-right {
-	right: -120px;
-	.rotate(90deg);
+  &:hover {
+    .hover;
+  }
 
-		&:hover {
-		right: -100px;
-		}
-	}
+  &.sidebar-left {
+    left: -110px;
+
+    @media (min-width: @screen-md-min) {
+      left: -120px;
+    }
+    .rotate(-90deg);
+
+    &:hover {
+    left: -100px;
+    }
+  }
+
+  &.sidebar-right {
+    right: -110px;
+
+    @media (min-width: @screen-md-min) {
+      right: -120px;
+    }
+    .rotate(90deg);
+
+    &:hover {
+    right: -100px;
+    }
+  }
 }
 
 .next-section {
@@ -296,6 +307,15 @@ padding: 10px 0;
 	&.fixed {
 	position: fixed !important;
 	}
+
+  &.text-yellow ul li a,
+  &.text-yellow ul li a:hover {
+    color: #ffff00;
+  }
+
+  &.text-yellow ul li.current  {
+    border-color: #ffff00;
+  }
 }
 
 // sections
@@ -308,9 +328,16 @@ background-size: 80% auto;
 overflow: hidden;
 
 	h1 {
-	.make-sm-column(10);
-	.make-sm-column-offset(1);
-	margin-bottom: 0;
+  .make-sm-column(10);
+  .make-sm-column-offset(1);
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.1;
+
+  @media (min-width: 1500px) {
+    margin-top: 0.67em;
+    line-height: 1.2;
+  }
 	}
 
 	h2 {
@@ -338,6 +365,7 @@ overflow: hidden;
 	.text-center;
 	padding: 0 60px;
 	margin-bottom: 50px;
+  margin-top: 40px;
 	@media (min-width: @screen-sm-min) {
 		margin-bottom: 0;
 		}
@@ -405,4 +433,15 @@ padding: 100px 0;
 		text-indent: 0;
 		}
 	}
+}
+
+#section-6 {
+  h1 {
+    padding-top: 10px;
+    .add-transition;
+
+    &:hover {
+      padding-top: 0px;
+    }
+  }
 }
